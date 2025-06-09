@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      background-image: url('https://sharkit.com.br/wp-content/uploads/2024/06/SECURITY_HACKER.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.21);
+      border: 2px solid white;                   
+      border-radius: 12px;
+      padding: 40px;
+      width: 400px;
+      max-width: 90%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px)
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .login-box input[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background-color: #339CFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .login-box input[type="submit"]:hover {
+      background-color: #ADD8E6;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Login Usuários</h2>
+    <form method="post">
+      <input type="text" name="login" placeholder="Usuário" required><br>
+      <input type="password" name="senha" placeholder="Senha" required><br>
+      <input type="submit" value="Entrar">
+    </form>
+    
+    {% if mensagem %}
+      <p style="color: red; margin-top: 10px;">{{ mensagem }}</p>
+    {% endif %}
+  </div>
+
+</body>
+</html>

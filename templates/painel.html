@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Consulta SQL</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+      background-image: url("/static/562.jpg");
+      background-size: cover;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      box-sizing: border-box;
+    }
+
+    .painel-topo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      color: #333;
+      padding: 20px 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-align: center;
+      z-index: 1000;
+      min-height: 90px;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .painel-topo h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .painel-topo p {
+      margin: 5px 0 0 0;
+      font-size: 1rem;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      height: calc(100vh - 90px); 
+      padding: 20px;
+      box-sizing: border-box;
+      margin-top: 90px; 
+    }
+
+    .box {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 2px solid white;
+      border-radius: 12px;
+      padding: 40px;
+      width: 400px;
+      max-width: 90%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    pre {
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      text-align: left;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="painel-topo">
+    <h1>Parabéns!</h1>
+    <p>Você conseguiu acessar a página de * usuarios, agora você tem acesso ao banco de dados </p>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <h2>Console SQL</h2>
+      <form method="post">
+        <input type="text" name="comando" placeholder="Digite o código SQL" required />
+        <button type="submit">Executar</button>
+      </form>
+      {% if resultado %}
+        <pre>{{ resultado }}</pre>
+      {% endif %}
+    </div>
+  </div>
+
+</body>
+</html>
