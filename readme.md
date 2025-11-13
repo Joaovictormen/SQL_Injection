@@ -1,1 +1,1 @@
-Baixe a biblioteca Flask
+Este projeto se trata de uma demonstração de um ataque de SQL injection , o site foi criado com a vulnerabilidade a SQL injection propositalmente .Para fins didáticos podemos entrar no site sem utilizar as senhas ou logins que necessário para autenticação , burlando a verificação do login com o banco de dados .
